@@ -12,18 +12,10 @@
 		E8CF83EB250A83B7005D5D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83EA250A83B7005D5D84 /* Assets.xcassets */; };
 		E8CF83EE250A83B7005D5D84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83ED250A83B7005D5D84 /* Preview Assets.xcassets */; };
 		E8CF83F9250A83B7005D5D84 /* NanoBreweryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF83F8250A83B7005D5D84 /* NanoBreweryTests.swift */; };
-		E8CF8404250A83B7005D5D84 /* NanoBreweryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF8403250A83B7005D5D84 /* NanoBreweryUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		E8CF83F5250A83B7005D5D84 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E8CF83DB250A83B5005D5D84 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E8CF83E2250A83B5005D5D84;
-			remoteInfo = NanoBrewery;
-		};
-		E8CF8400250A83B7005D5D84 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E8CF83DB250A83B5005D5D84 /* Project object */;
 			proxyType = 1;
@@ -42,9 +34,6 @@
 		E8CF83F4250A83B7005D5D84 /* NanoBreweryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoBreweryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF83F8250A83B7005D5D84 /* NanoBreweryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBreweryTests.swift; sourceTree = "<group>"; };
 		E8CF83FA250A83B7005D5D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8CF83FF250A83B7005D5D84 /* NanoBreweryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoBreweryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8CF8403250A83B7005D5D84 /* NanoBreweryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBreweryUITests.swift; sourceTree = "<group>"; };
-		E8CF8405250A83B7005D5D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,22 +51,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8CF83FC250A83B7005D5D84 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E832C5FC250A87ED007E4BA2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E8CF83EF250A83B7005D5D84 /* Info.plist */,
+				E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E832C5FD250A87F4007E4BA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8CF83E8250A83B5005D5D84 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E832C5FE250A87FA007E4BA2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E832C5FF250A8828007E4BA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E832C600250A882F007E4BA2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E832C601250A883C007E4BA2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E832C602250A8883007E4BA2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8CF83EA250A83B7005D5D84 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E8CF83DA250A83B5005D5D84 = {
 			isa = PBXGroup;
 			children = (
 				E8CF83E5250A83B5005D5D84 /* NanoBrewery */,
 				E8CF83F7250A83B7005D5D84 /* NanoBreweryTests */,
-				E8CF8402250A83B7005D5D84 /* NanoBreweryUITests */,
 				E8CF83E4250A83B5005D5D84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +121,6 @@
 			children = (
 				E8CF83E3250A83B5005D5D84 /* NanoBrewery.app */,
 				E8CF83F4250A83B7005D5D84 /* NanoBreweryTests.xctest */,
-				E8CF83FF250A83B7005D5D84 /* NanoBreweryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,10 +128,13 @@
 		E8CF83E5250A83B5005D5D84 /* NanoBrewery */ = {
 			isa = PBXGroup;
 			children = (
-				E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */,
-				E8CF83E8250A83B5005D5D84 /* ContentView.swift */,
-				E8CF83EA250A83B7005D5D84 /* Assets.xcassets */,
-				E8CF83EF250A83B7005D5D84 /* Info.plist */,
+				E832C5FC250A87ED007E4BA2 /* Application */,
+				E832C5FF250A8828007E4BA2 /* Models */,
+				E832C5FE250A87FA007E4BA2 /* ViewModels */,
+				E832C5FD250A87F4007E4BA2 /* Views */,
+				E832C600250A882F007E4BA2 /* Services */,
+				E832C601250A883C007E4BA2 /* Helpers */,
+				E832C602250A8883007E4BA2 /* Resources */,
 				E8CF83EC250A83B7005D5D84 /* Preview Content */,
 			);
 			path = NanoBrewery;
@@ -119,15 +155,6 @@
 				E8CF83FA250A83B7005D5D84 /* Info.plist */,
 			);
 			path = NanoBreweryTests;
-			sourceTree = "<group>";
-		};
-		E8CF8402250A83B7005D5D84 /* NanoBreweryUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E8CF8403250A83B7005D5D84 /* NanoBreweryUITests.swift */,
-				E8CF8405250A83B7005D5D84 /* Info.plist */,
-			);
-			path = NanoBreweryUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,24 +195,6 @@
 			productReference = E8CF83F4250A83B7005D5D84 /* NanoBreweryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E8CF83FE250A83B7005D5D84 /* NanoBreweryUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E8CF840E250A83B7005D5D84 /* Build configuration list for PBXNativeTarget "NanoBreweryUITests" */;
-			buildPhases = (
-				E8CF83FB250A83B7005D5D84 /* Sources */,
-				E8CF83FC250A83B7005D5D84 /* Frameworks */,
-				E8CF83FD250A83B7005D5D84 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E8CF8401250A83B7005D5D84 /* PBXTargetDependency */,
-			);
-			name = NanoBreweryUITests;
-			productName = NanoBreweryUITests;
-			productReference = E8CF83FF250A83B7005D5D84 /* NanoBreweryUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,10 +208,6 @@
 						CreatedOnToolsVersion = 12.0;
 					};
 					E8CF83F3250A83B7005D5D84 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = E8CF83E2250A83B5005D5D84;
-					};
-					E8CF83FE250A83B7005D5D84 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = E8CF83E2250A83B5005D5D84;
 					};
@@ -223,7 +228,6 @@
 			targets = (
 				E8CF83E2250A83B5005D5D84 /* NanoBrewery */,
 				E8CF83F3250A83B7005D5D84 /* NanoBreweryTests */,
-				E8CF83FE250A83B7005D5D84 /* NanoBreweryUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,13 +243,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E8CF83F2250A83B7005D5D84 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8CF83FD250A83B7005D5D84 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,14 +269,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8CF83FB250A83B7005D5D84 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8CF8404250A83B7005D5D84 /* NanoBreweryUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -287,11 +276,6 @@
 			isa = PBXTargetDependency;
 			target = E8CF83E2250A83B5005D5D84 /* NanoBrewery */;
 			targetProxy = E8CF83F5250A83B7005D5D84 /* PBXContainerItemProxy */;
-		};
-		E8CF8401250A83B7005D5D84 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E8CF83E2250A83B5005D5D84 /* NanoBrewery */;
-			targetProxy = E8CF8400250A83B7005D5D84 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -420,16 +404,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoBrewery/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NanoBrewery/Info.plist;
+				INFOPLIST_FILE = NanoBrewery/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eridbardhaj.NanoBrewery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -441,16 +426,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"NanoBrewery/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NanoBrewery/Info.plist;
+				INFOPLIST_FILE = NanoBrewery/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.eridbardhaj.NanoBrewery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -496,44 +482,6 @@
 			};
 			name = Release;
 		};
-		E8CF840F250A83B7005D5D84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NanoBreweryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eridbardhaj.NanoBreweryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NanoBrewery;
-			};
-			name = Debug;
-		};
-		E8CF8410250A83B7005D5D84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NanoBreweryUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.eridbardhaj.NanoBreweryUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NanoBrewery;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -560,15 +508,6 @@
 			buildConfigurations = (
 				E8CF840C250A83B7005D5D84 /* Debug */,
 				E8CF840D250A83B7005D5D84 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E8CF840E250A83B7005D5D84 /* Build configuration list for PBXNativeTarget "NanoBreweryUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E8CF840F250A83B7005D5D84 /* Debug */,
-				E8CF8410250A83B7005D5D84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
