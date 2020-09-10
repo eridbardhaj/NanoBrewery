@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E832C608250A964D007E4BA2 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832C607250A964D007E4BA2 /* Beer.swift */; };
+		E832C60A250A9C14007E4BA2 /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832C609250A9C14007E4BA2 /* NetworkAPI.swift */; };
+		E832C60C250A9D9E007E4BA2 /* NetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832C60B250A9D9E007E4BA2 /* NetworkAgent.swift */; };
+		E832C60E250AA0BE007E4BA2 /* NetworkAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E832C60D250AA0BE007E4BA2 /* NetworkAPIConfiguration.swift */; };
 		E8CF83E7250A83B5005D5D84 /* NanoBreweryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */; };
 		E8CF83E9250A83B5005D5D84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF83E8250A83B5005D5D84 /* ContentView.swift */; };
 		E8CF83EB250A83B7005D5D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83EA250A83B7005D5D84 /* Assets.xcassets */; };
@@ -25,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E832C607250A964D007E4BA2 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		E832C609250A9C14007E4BA2 /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		E832C60B250A9D9E007E4BA2 /* NetworkAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgent.swift; sourceTree = "<group>"; };
+		E832C60D250AA0BE007E4BA2 /* NetworkAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIConfiguration.swift; sourceTree = "<group>"; };
 		E8CF83E3250A83B5005D5D84 /* NanoBrewery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoBrewery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBreweryApp.swift; sourceTree = "<group>"; };
 		E8CF83E8250A83B5005D5D84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,8 +65,8 @@
 		E832C5FC250A87ED007E4BA2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				E8CF83EF250A83B7005D5D84 /* Info.plist */,
 				E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */,
+				E8CF83EF250A83B7005D5D84 /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -81,6 +89,7 @@
 		E832C5FF250A8828007E4BA2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E832C607250A964D007E4BA2 /* Beer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -88,6 +97,7 @@
 		E832C600250A882F007E4BA2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E832C60F250AA0C5007E4BA2 /* Network */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -105,6 +115,16 @@
 				E8CF83EA250A83B7005D5D84 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E832C60F250AA0C5007E4BA2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E832C609250A9C14007E4BA2 /* NetworkAPI.swift */,
+				E832C60D250AA0BE007E4BA2 /* NetworkAPIConfiguration.swift */,
+				E832C60B250A9D9E007E4BA2 /* NetworkAgent.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E8CF83DA250A83B5005D5D84 = {
@@ -257,7 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8CF83E9250A83B5005D5D84 /* ContentView.swift in Sources */,
+				E832C608250A964D007E4BA2 /* Beer.swift in Sources */,
 				E8CF83E7250A83B5005D5D84 /* NanoBreweryApp.swift in Sources */,
+				E832C60C250A9D9E007E4BA2 /* NetworkAgent.swift in Sources */,
+				E832C60A250A9C14007E4BA2 /* NetworkAPI.swift in Sources */,
+				E832C60E250AA0BE007E4BA2 /* NetworkAPIConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
