@@ -18,14 +18,13 @@ class BeerListCellViewModel: ObservableObject {
     // MARK: Mutable
 
     private var cancellables = Set<AnyCancellable>()
-    @Published private(set) var hashtags = [String]()
 
     // MARK: Published
 
     @Published private(set) var name = ""
     @Published private(set) var percentage = ""
     @Published private(set) var firstBrewed = ""
-    @Published private(set) var hashtagAttributedString: NSAttributedString?
+    @Published private(set) var hashtags = [String]()
     @Published private(set) var image: UIImage?
 
     // MARK: - Initializers
@@ -46,8 +45,6 @@ class BeerListCellViewModel: ObservableObject {
             .components(separatedBy: ". ")
             .map { $0.lowercased() }
         firstBrewed = beer.firstBrewed
-        
-        highlightHashtags()
     }
     
     private func setupObserving() {
@@ -56,30 +53,6 @@ class BeerListCellViewModel: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in self?.image = $0 }
             .store(in: &cancellables)
-    }
-    
-    // MARK: - Helpers
-    // MARK: Formatting
-    
-    private func highlightHashtags() {
-        let attributedString = hashtags
-            .filter { !$0.isEmpty }
-            .map { "#\($0)" }
-            .joined(separator: " ")
-            .mutableAttributedString(
-                font: AppFont.standard.uiFont,
-                color: AppColor.superLightText.uiColor
-            )
-        for tag in hashtags {
-            attributedString.highlight(
-                text: "#\(tag)",
-                font: AppFont.standard.uiFont,
-                color: AppColor.tint.uiColor,
-                backgroundColor: AppColor.tint.uiColor.withAlphaComponent(0.2)
-            )
-        }
-        
-        hashtagAttributedString = attributedString
     }
 }
 
