@@ -11,7 +11,7 @@ import SwiftUI
 struct NanoBreweryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            BeerListView(viewModel: BeerListViewModel())
         }
     }
 }
