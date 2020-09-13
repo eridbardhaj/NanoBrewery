@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-protocol NanoBreweryNetworkeable {
+protocol BreweryAPI {
     func listBeers() -> AnyPublisher<[Beer], Error>
     func showBeer(_ id: Int) -> AnyPublisher<Beer, Error>
 }
 
-class NetworkAPI: NanoBreweryNetworkeable {
+class NetworkAPI: BreweryAPI {
     
     // MARK: - Properties
     // MARK: Injected
