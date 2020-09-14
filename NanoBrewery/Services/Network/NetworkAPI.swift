@@ -49,8 +49,7 @@ class NetworkAPI: BreweryAPI {
 
     private func prepareRequest(_ route: String) -> URLRequest {
         let urlString = NetworkAPIConfiguration.baseURLString + route
-        let url = URL(string: urlString)!
-        return URLRequest(url: url)
+        return URLRequest(url: urlString.requiredURL)
     }
 }
 
