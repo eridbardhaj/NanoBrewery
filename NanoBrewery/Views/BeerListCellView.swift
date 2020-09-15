@@ -34,6 +34,7 @@ struct BeerListCellView: View {
         VStack {
             HStack(alignment: .top) {
                 Image(uiImage: viewModel.image ?? UIImage())
+                    .renderingMode(.original)
                     .resizable()
                     .scaledToFit()
                     .frame(
@@ -101,8 +102,8 @@ struct BeerListCellView: View {
             }
             VStack {
                 Text(text)
-                    .lineLimit(2)
                     .appText(font: font, color: color)
+                    .lineLimit(2)
                 Spacer()
             }
         }
@@ -115,14 +116,16 @@ struct BeerListCellView_Previews: PreviewProvider {
             id: 3,
             name: "Pilsen Lager, Pilsen Lager, Pilsen Lager",
             tagline: "Unleash. Yeast. Series. Best.",
-            firstBrewed: "09/2013",
             description: "Our Unleash the Yeast series was an epic experiment into the differences in aroma and flavour provided by switching up your yeast. We brewed up a wort with a light caramel note and some toasty biscuit flavour, and hopped it with Amarillo and Centennial for a citrusy bitterness. Everything else is down to the yeast. Pilsner yeast ferments with no fruity esters or spicy phenols, although it can add a hint of butterscotch.",
-            percentage: 6,
+            gravity: 1050,
+            bitterness: 60,
+            firstBrewed: "07/2007",
+            percentage: 4.5,
             imageUrlString: "https://images.punkapi.com/v2/4.png",
-            foodPairing: [
-                "Spicy crab cakes",
-                "Spicy cucumber and carrot Thai salad",
-                "Sweet filled dumplings"
+            ingredients: [
+                "malt",
+                "hops",
+                "yeast"
             ]
         )
         BeerListCellView(viewModel: BeerListCellViewModel(beer: beer))

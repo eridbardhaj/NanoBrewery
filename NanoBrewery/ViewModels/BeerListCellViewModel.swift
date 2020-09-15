@@ -40,7 +40,7 @@ class BeerListCellViewModel: ObservableObject {
 
     private func setupInitialValues() {
         name = beer.name
-        percentage = String(format: "%.2f", beer.percentage)
+        percentage = String(format: "%.1f", beer.percentage)
         hashtags = beer.tagline
             .components(separatedBy: ". ")
             .map { $0.lowercased() }

@@ -7,7 +7,32 @@
 
 import Foundation
 
-struct Beer: Codable, Equatable {
+struct Beer: Decodable, Equatable, Identifiable {
+    
+    // MARK: - Inner Types
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case tagline
+        case description
+        case firstBrewed    = "first_brewed"
+        case gravity        = "target_fg"
+        case bitterness     = "ibu"
+        case percentage     = "abv"
+        case imageUrlString = "image_url"
+        case ingredients    = "ingredients"
+    }
+    
+    struct IngredientKey: CodingKey {
+        var stringValue: String
+        init?(stringValue: String) {
+            self.stringValue = stringValue
+        }
+
+        var intValue: Int? { return nil }
+        init?(intValue: Int) { return nil }
+    }
     
     // MARK: - Properties
     // MARK: Immutable
@@ -15,65 +40,52 @@ struct Beer: Codable, Equatable {
     let id: Int
     let name: String
     let tagline: String
-    let firstBrewed: String
     let description: String
+    let firstBrewed: String
+    let gravity: Double
+    let bitterness: Double?
     let percentage: Double
     let imageUrlString: String
-    let foodPairing: [String]
+    let ingredients: [String]
     
     // MARK: - Protocol Conformance
     // MARK: Codable
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case tagline
-        case firstBrewed    = "first_brewed"
-        case description
-        case percentage     = "abv"
-        case imageUrlString = "image_url"
-        case foodPairing    = "food_pairing"
-    }
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decode(Int.self, forKey: .id)
         name = try values.decode(String.self, forKey: .name)
         tagline = try values.decode(String.self, forKey: .tagline)
-        firstBrewed = try values.decode(String.self, forKey: .firstBrewed)
         description = try values.decode(String.self, forKey: .description)
+        gravity = try values.decode(Double.self, forKey: .gravity)
+        bitterness = try values.decodeIfPresent(Double.self, forKey: .bitterness)
+        firstBrewed = try values.decode(String.self, forKey: .firstBrewed)
         percentage = try values.decode(Double.self, forKey: .percentage)
         imageUrlString = try values.decode(String.self, forKey: .imageUrlString)
-        foodPairing = try values.decode([String].self, forKey: .foodPairing)
-    }
-    
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(id, forKey: .id)
-        try container.encode(name, forKey: .name)
-        try container.encode(tagline, forKey: .tagline)
-        try container.encode(firstBrewed, forKey: .firstBrewed)
-        try container.encode(description, forKey: .description)
-        try container.encode(percentage, forKey: .percentage)
-        try container.encode(imageUrlString, forKey: .imageUrlString)
-        try container.encode(foodPairing, forKey: .foodPairing)
+        
+        let ingredientContainer = try values.nestedContainer(keyedBy: IngredientKey.self, forKey: .ingredients)
+        ingredients = ingredientContainer.allKeys.map { $0.stringValue }
     }
     
     init(id: Int,
          name: String,
          tagline: String,
-         firstBrewed: String,
          description: String,
+         gravity: Double,
+         bitterness: Double,
+         firstBrewed: String,
          percentage: Double,
          imageUrlString: String,
-         foodPairing: [String]) {
+         ingredients: [String]) {
         self.id = id
         self.name = name
         self.tagline = tagline
-        self.firstBrewed = firstBrewed
         self.description = description
+        self.gravity = gravity
+        self.bitterness = bitterness
+        self.firstBrewed = firstBrewed
         self.percentage = percentage
         self.imageUrlString = imageUrlString
-        self.foodPairing = foodPairing
+        self.ingredients = ingredients
     }
 }
