@@ -35,7 +35,8 @@ class BeerDetailsViewModel: ObservableObject {
     private var bitternessHint = "bitterness"
     
     // MARK: Published
-    
+
+    @Published private(set) var titleText = "Beer Details"
     @Published private(set) var name = ""
     @Published private(set) var firstBrewed = ""
     @Published private(set) var leftEntries = [LeftEntry]()

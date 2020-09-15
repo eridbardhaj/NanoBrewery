@@ -22,6 +22,7 @@ class BeerListViewModel: ObservableObject {
     // MARK: Published
 
     @Published private(set) var beerList = [Beer]()
+    @Published private(set) var titleText = "Beer List"
 
     // MARK: - Initializers
 
