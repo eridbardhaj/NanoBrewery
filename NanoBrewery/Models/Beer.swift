@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Beer: Decodable, Equatable {
+struct Beer: Decodable, Equatable, Identifiable {
     
     // MARK: - Inner Types
     
