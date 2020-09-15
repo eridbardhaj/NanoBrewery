@@ -31,6 +31,8 @@
 		E8FA476D250EBE9D0087E164 /* View+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA476C250EBE9D0087E164 /* View+Modifiers.swift */; };
 		E8FA476F250ED7E20087E164 /* EdgeInsets+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA476E250ED7E20087E164 /* EdgeInsets+Generic.swift */; };
 		E8FA4771250ED8100087E164 /* AppPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA4770250ED8100087E164 /* AppPadding.swift */; };
+		E8FA4773250EEAD60087E164 /* BeerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA4772250EEAD60087E164 /* BeerDetailsViewModel.swift */; };
+		E8FA4775250EEE6C0087E164 /* BeerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA4774250EEE6C0087E164 /* BeerDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		E8FA476C250EBE9D0087E164 /* View+Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Modifiers.swift"; sourceTree = "<group>"; };
 		E8FA476E250ED7E20087E164 /* EdgeInsets+Generic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+Generic.swift"; sourceTree = "<group>"; };
 		E8FA4770250ED8100087E164 /* AppPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPadding.swift; sourceTree = "<group>"; };
+		E8FA4772250EEAD60087E164 /* BeerDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsViewModel.swift; sourceTree = "<group>"; };
+		E8FA4774250EEE6C0087E164 /* BeerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 			children = (
 				E832C603250A92BA007E4BA2 /* BeerListView.swift */,
 				E84FD68A250AC58B001A3B97 /* BeerListCellView.swift */,
+				E8FA4774250EEE6C0087E164 /* BeerDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			children = (
 				E832C605250A939D007E4BA2 /* BeerListViewModel.swift */,
 				E84FD68C250AC5AA001A3B97 /* BeerListCellViewModel.swift */,
+				E8FA4772250EEAD60087E164 /* BeerDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -358,6 +364,8 @@
 				E832C60C250A9D9E007E4BA2 /* NetworkAgent.swift in Sources */,
 				E832C60A250A9C14007E4BA2 /* NetworkAPI.swift in Sources */,
 				E8FA476D250EBE9D0087E164 /* View+Modifiers.swift in Sources */,
+				E8FA4775250EEE6C0087E164 /* BeerDetailsView.swift in Sources */,
+				E8FA4773250EEAD60087E164 /* BeerDetailsViewModel.swift in Sources */,
 				E8FA4771250ED8100087E164 /* AppPadding.swift in Sources */,
 				E8FA4767250EBB970087E164 /* NSMutableAttributedString+SwiftUI.swift in Sources */,
 				E84FD692250AC746001A3B97 /* String+URLFormat.swift in Sources */,
