@@ -23,13 +23,18 @@ struct BeerListView: View {
     // MARK: - View Configuration
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(viewModel.beerList, id: \.id) { beer in
-                    BeerListCellView(viewModel: BeerListCellViewModel(beer: beer))
+        NavigationView {
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.beerList, id: \.id) { beer in
+                        let beerDetails = BeerDetailsView(viewModel: BeerDetailsViewModel(beer: beer))
+                        NavigationLink(destination: beerDetails) {
+                            BeerListCellView(viewModel: BeerListCellViewModel(beer: beer))
+                        }
+                    }
                 }
+                .background(AppColor.background.color)
             }
-            .background(AppColor.background.color)
         }
     }
 }
