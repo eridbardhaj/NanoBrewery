@@ -21,23 +21,40 @@ struct BeerListView: View {
     }
     
     // MARK: - View Configuration
-    
+
+    @ViewBuilder
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewModel.beerList, id: \.id) { beer in
-                        let beerDetails = BeerDetailsView(viewModel: BeerDetailsViewModel(beer: beer))
-                        NavigationLink(destination: beerDetails) {
-                            BeerListCellView(viewModel: BeerListCellViewModel(beer: beer))
+            Group {
+                if viewModel.isLoading { emptyContent() } else {
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(viewModel.beerList, id: \.id) { beer in
+                                let beerDetails = BeerDetailsView(viewModel: BeerDetailsViewModel(beer: beer))
+                                NavigationLink(destination: beerDetails) {
+                                    BeerListCellView(viewModel: BeerListCellViewModel(beer: beer))
+                                }
+                            }
                         }
+                        .background(AppColor.background.color)
+                        .edgesIgnoringSafeArea(.bottom)
                     }
                 }
-                .background(AppColor.background.color)
             }
             .background(AppColor.background.color)
+            .edgesIgnoringSafeArea(.bottom)
             .navigationBarTitle(viewModel.titleText, displayMode: .inline)
         }
+    }
+
+    private func emptyContent() -> some View {
+        VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/) {
+            ProgressView(viewModel.loadingText)
+                .foregroundColor(AppColor.superLightText.color)
+                .accentColor(AppColor.superLightText.color)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 

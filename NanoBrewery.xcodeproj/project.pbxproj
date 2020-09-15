@@ -18,6 +18,7 @@
 		E84FD68D250AC5AA001A3B97 /* BeerListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD68C250AC5AA001A3B97 /* BeerListCellViewModel.swift */; };
 		E84FD690250AC720001A3B97 /* Image+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD68F250AC720001A3B97 /* Image+Network.swift */; };
 		E84FD692250AC746001A3B97 /* String+URLFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD691250AC746001A3B97 /* String+URLFormat.swift */; };
+		E86AB3522510FF38008DAA88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86AB3512510FF38008DAA88 /* LaunchScreen.storyboard */; };
 		E8CF83E7250A83B5005D5D84 /* NanoBreweryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */; };
 		E8CF83EB250A83B7005D5D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83EA250A83B7005D5D84 /* Assets.xcassets */; };
 		E8CF83EE250A83B7005D5D84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83ED250A83B7005D5D84 /* Preview Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		E84FD68C250AC5AA001A3B97 /* BeerListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListCellViewModel.swift; sourceTree = "<group>"; };
 		E84FD68F250AC720001A3B97 /* Image+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Network.swift"; sourceTree = "<group>"; };
 		E84FD691250AC746001A3B97 /* String+URLFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URLFormat.swift"; sourceTree = "<group>"; };
+		E86AB3512510FF38008DAA88 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8CF83E3250A83B5005D5D84 /* NanoBrewery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoBrewery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBreweryApp.swift; sourceTree = "<group>"; };
 		E8CF83EA250A83B7005D5D84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				E8FA475E250EB2460087E164 /* Stubs */,
 				E8CF83EA250A83B7005D5D84 /* Assets.xcassets */,
+				E86AB3512510FF38008DAA88 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				E8FA4762250EB2ED0087E164 /* beer_details.json in Resources */,
 				E8CF83EE250A83B7005D5D84 /* Preview Assets.xcassets in Resources */,
 				E8CF83EB250A83B7005D5D84 /* Assets.xcassets in Resources */,
+				E86AB3522510FF38008DAA88 /* LaunchScreen.storyboard in Resources */,
 				E8FA4761250EB2ED0087E164 /* beer_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

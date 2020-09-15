@@ -21,8 +21,10 @@ class BeerListViewModel: ObservableObject {
 
     // MARK: Published
 
+    @Published private(set) var isLoading: Bool = false
     @Published private(set) var beerList = [Beer]()
     @Published private(set) var titleText = "Beer List"
+    @Published private(set) var loadingText = "Loading Beers"
 
     // MARK: - Initializers
 
@@ -36,6 +38,13 @@ class BeerListViewModel: ObservableObject {
     private func setupObserving() {
         networkAPI.listBeers()
             .receive(on: DispatchQueue.main)
+            .handleEvents(
+                receiveSubscription: { [weak self] _ in self?.isLoading = true },
+                receiveOutput: { [weak self] _ in self?.isLoading = false },
+                receiveCompletion: { [weak self] _ in self?.isLoading = false },
+                receiveCancel: { [weak self] in self?.isLoading = false },
+                receiveRequest: { _ in }
+            )
             .sink(
                 receiveCompletion: { completion in
                     switch completion {
