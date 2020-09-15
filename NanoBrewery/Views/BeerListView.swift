@@ -35,6 +35,8 @@ struct BeerListView: View {
                 }
                 .background(AppColor.background.color)
             }
+            .background(AppColor.background.color)
+            .navigationBarTitle(viewModel.titleText, displayMode: .inline)
         }
     }
 }
