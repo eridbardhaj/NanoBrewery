@@ -30,44 +30,50 @@ struct BeerDetailsView: View {
     }
     
     // MARK: - View Configuration
-    
+
     var body: some View {
-        GeometryReader { geometry in
-            VStack(alignment: .leading) {
-                // Header
-                HStack(alignment: .top, spacing: AppPadding.padding) {
-                    leftContent
-                    Image(uiImage: viewModel.image ?? UIImage())
-                        .resizable()
-                        .scaledToFit()
-                        .frame(
-                            width: geometry.size.width * Constants.imageViewWidthRatio,
-                            height: Constants.imageViewHeight,
-                            alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
-                        )
-                        .padding(AppPadding.smallPadding)
-                        .background(AppColor.light.color)
-                }
-                .padding(EdgeInsets(horizontal: AppPadding.padding, vertical: AppPadding.smallPadding))
-                
-                // Sections
-                Group {
-                    Text(viewModel.ingredientsHint)
-                        .appText(font: .heading, color: .lightText)
-                    Text(viewModel.ingredients)
-                        .appText(font: .subHeading, color: .superLightText)
-                    
-                    Text(viewModel.descriptionHint)
-                        .appText(font: .heading, color: .lightText)
-                    Text(viewModel.description)
-                        .appText(font: .subHeading, color: .superLightText)
-                }
-                .padding(EdgeInsets(horizontal: AppPadding.padding, vertical: AppPadding.smallPadding))
-            }
-        }.background(AppColor.background.color)
+        AppColor.background.color
+            .edgesIgnoringSafeArea(.bottom)
+            .overlay(
+                content
+            )
     }
     
-    private var leftContent: some View {
+    var content: some View {
+        GeometryReader { geometry in
+            ScrollView {
+                VStack(alignment: .leading) {
+                    headerContent(for: geometry)
+                        .padding(EdgeInsets(horizontal: AppPadding.padding, vertical: AppPadding.smallPadding))
+
+                    sectionsContent()
+                        .padding(EdgeInsets(horizontal: AppPadding.padding, vertical: AppPadding.smallPadding))
+
+                    Spacer()
+                }
+                .background(AppColor.background.color)
+                .navigationBarTitle(viewModel.titleText, displayMode: .inline)
+            }
+        }
+    }
+
+    private func headerContent(for geometry: GeometryProxy) -> some View {
+        HStack(alignment: .top, spacing: AppPadding.padding) {
+            leftHeaderContent()
+            Image(uiImage: viewModel.image ?? UIImage())
+                .resizable()
+                .scaledToFit()
+                .frame(
+                    width: geometry.size.width * Constants.imageViewWidthRatio,
+                    height: Constants.imageViewHeight,
+                    alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/
+                )
+                .padding(AppPadding.smallPadding)
+                .background(AppColor.light.color)
+        }
+    }
+
+    private func leftHeaderContent() -> some View {
         return VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: AppPadding.smallPadding) {
             HStack {
                 Text(viewModel.name)
@@ -80,12 +86,26 @@ struct BeerDetailsView: View {
                     .appText(font: .subHeading, color: .tint)
                 Spacer()
             }.padding(EdgeInsets(top: 0, leading: 0, bottom: AppPadding.padding, trailing: 0))
-            
+
             VStack(alignment: .leading, spacing: AppPadding.smallPadding) {
                 ForEach(viewModel.leftEntries, id: \.text) { leftEntry in
                     tintedIconTextRow(leftEntry: leftEntry)
                 }
             }
+        }
+    }
+
+    private func sectionsContent() -> some View {
+        Group {
+            Text(viewModel.ingredientsHint)
+                .appText(font: .heading, color: .lightText)
+            Text(viewModel.ingredients)
+                .appText(font: .subHeading, color: .superLightText)
+
+            Text(viewModel.descriptionHint)
+                .appText(font: .heading, color: .lightText)
+            Text(viewModel.description)
+                .appText(font: .subHeading, color: .superLightText)
         }
     }
     
