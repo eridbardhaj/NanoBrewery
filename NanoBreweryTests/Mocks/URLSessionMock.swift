@@ -24,18 +24,10 @@ class URLSessionMock: URLSessionable {
     }
 
     // MARK: - Properties
-    // MARK: Immutable
+    // MARK: Mutable
 
-    let calledCount: CalledCount
-    let returnValue: ReturnValue
-
-    // MARK: - Initializers
-
-    init(calledCount: CalledCount = CalledCount(),
-         returnValue: ReturnValue = ReturnValue()) {
-        self.calledCount = calledCount
-        self.returnValue = returnValue
-    }
+    var calledCount = CalledCount()
+    var returnValue = ReturnValue()
 
     // MARK: - Protocol Conformance
     // MARK: URLSessionable
