@@ -39,10 +39,9 @@ class NetworkAgentMock: Agent {
     var parameter = Parameter()
 
     // MARK: - Protocol Conformance
-    // MARK: URLSessionable
+    // MARK: Agent
 
     func run<T>(_ request: URLRequest, _ decoder: JSONDecoder) -> AnyPublisher<Response<T>, Error> where T: Decodable {
-
         parameter.urlRequest = request
         calledCount.run += 1
         return returnValue.run()
