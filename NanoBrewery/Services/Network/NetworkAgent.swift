@@ -22,11 +22,11 @@ class NetworkAgent: Agent {
     // MARK: - Properties
     // MARK: Injected
     
-    private let urlSession: URLSession
+    private let urlSession: URLSessionable
     
     // MARK: - Initializers
     
-    init(urlSession: URLSession = URLSession.shared) {
+    init(urlSession: URLSessionable = URLSession.shared) {
         self.urlSession = urlSession
     }
     
