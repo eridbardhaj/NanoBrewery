@@ -19,10 +19,17 @@
 		E84FD690250AC720001A3B97 /* Image+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD68F250AC720001A3B97 /* Image+Network.swift */; };
 		E84FD692250AC746001A3B97 /* String+URLFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD691250AC746001A3B97 /* String+URLFormat.swift */; };
 		E86AB3522510FF38008DAA88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86AB3512510FF38008DAA88 /* LaunchScreen.storyboard */; };
+		E86AB3572511A217008DAA88 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB3562511A217008DAA88 /* URLSessionMock.swift */; };
+		E86AB35A2511A2B8008DAA88 /* URLSessionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB3592511A2B8008DAA88 /* URLSessionable.swift */; };
+		E86AB35C2511A405008DAA88 /* NetworkAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB35B2511A405008DAA88 /* NetworkAgentTests.swift */; };
+		E86AB35E2511A7D9008DAA88 /* NetworkAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB35D2511A7D8008DAA88 /* NetworkAPITests.swift */; };
+		E86AB3602511A812008DAA88 /* NetworkAgentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB35F2511A812008DAA88 /* NetworkAgentMock.swift */; };
+		E86AB3632511A90F008DAA88 /* StubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB3622511A90F008DAA88 /* StubHelper.swift */; };
+		E86AB3672511B0BB008DAA88 /* BeerListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB3662511B0BB008DAA88 /* BeerListViewModelTests.swift */; };
+		E86AB3692511B0F7008DAA88 /* NetworkAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB3682511B0F7008DAA88 /* NetworkAPIMock.swift */; };
 		E8CF83E7250A83B5005D5D84 /* NanoBreweryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */; };
 		E8CF83EB250A83B7005D5D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83EA250A83B7005D5D84 /* Assets.xcassets */; };
 		E8CF83EE250A83B7005D5D84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83ED250A83B7005D5D84 /* Preview Assets.xcassets */; };
-		E8CF83F9250A83B7005D5D84 /* NanoBreweryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF83F8250A83B7005D5D84 /* NanoBreweryTests.swift */; };
 		E8FA4761250EB2ED0087E164 /* beer_list.json in Resources */ = {isa = PBXBuildFile; fileRef = E8FA475F250EB2ED0087E164 /* beer_list.json */; };
 		E8FA4762250EB2ED0087E164 /* beer_details.json in Resources */ = {isa = PBXBuildFile; fileRef = E8FA4760250EB2ED0087E164 /* beer_details.json */; };
 		E8FA4764250EBAF60087E164 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA4763250EBAF60087E164 /* AttributedText.swift */; };
@@ -59,13 +66,20 @@
 		E84FD68F250AC720001A3B97 /* Image+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Network.swift"; sourceTree = "<group>"; };
 		E84FD691250AC746001A3B97 /* String+URLFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URLFormat.swift"; sourceTree = "<group>"; };
 		E86AB3512510FF38008DAA88 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E86AB3562511A217008DAA88 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		E86AB3592511A2B8008DAA88 /* URLSessionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionable.swift; sourceTree = "<group>"; };
+		E86AB35B2511A405008DAA88 /* NetworkAgentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgentTests.swift; sourceTree = "<group>"; };
+		E86AB35D2511A7D8008DAA88 /* NetworkAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPITests.swift; sourceTree = "<group>"; };
+		E86AB35F2511A812008DAA88 /* NetworkAgentMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgentMock.swift; sourceTree = "<group>"; };
+		E86AB3622511A90F008DAA88 /* StubHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubHelper.swift; sourceTree = "<group>"; };
+		E86AB3662511B0BB008DAA88 /* BeerListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModelTests.swift; sourceTree = "<group>"; };
+		E86AB3682511B0F7008DAA88 /* NetworkAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIMock.swift; sourceTree = "<group>"; };
 		E8CF83E3250A83B5005D5D84 /* NanoBrewery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoBrewery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBreweryApp.swift; sourceTree = "<group>"; };
 		E8CF83EA250A83B7005D5D84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8CF83ED250A83B7005D5D84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E8CF83EF250A83B7005D5D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8CF83F4250A83B7005D5D84 /* NanoBreweryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoBreweryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8CF83F8250A83B7005D5D84 /* NanoBreweryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBreweryTests.swift; sourceTree = "<group>"; };
 		E8CF83FA250A83B7005D5D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8FA475F250EB2ED0087E164 /* beer_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beer_list.json; sourceTree = "<group>"; };
 		E8FA4760250EB2ED0087E164 /* beer_details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beer_details.json; sourceTree = "<group>"; };
@@ -166,6 +180,7 @@
 		E84FD687250AC36F001A3B97 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E86AB3582511A2A9008DAA88 /* Protocols */,
 				E8FA4765250EBB660087E164 /* Representables */,
 				E84FD68E250AC711001A3B97 /* Extensions */,
 				E84FD688250AC383001A3B97 /* ServiceFactory.swift */,
@@ -186,6 +201,66 @@
 				E8FA476E250ED7E20087E164 /* EdgeInsets+Generic.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E86AB35325110379008DAA88 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E86AB3652511B07A008DAA88 /* ViewModels */,
+				E86AB3642511B06F008DAA88 /* Services */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E86AB35425110381008DAA88 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E86AB3562511A217008DAA88 /* URLSessionMock.swift */,
+				E86AB35F2511A812008DAA88 /* NetworkAgentMock.swift */,
+				E86AB3682511B0F7008DAA88 /* NetworkAPIMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E86AB3552511038A008DAA88 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E8CF83FA250A83B7005D5D84 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E86AB3582511A2A9008DAA88 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E86AB3592511A2B8008DAA88 /* URLSessionable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E86AB3612511A8C8008DAA88 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E86AB3622511A90F008DAA88 /* StubHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E86AB3642511B06F008DAA88 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E86AB35B2511A405008DAA88 /* NetworkAgentTests.swift */,
+				E86AB35D2511A7D8008DAA88 /* NetworkAPITests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E86AB3652511B07A008DAA88 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E86AB3662511B0BB008DAA88 /* BeerListViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E8CF83DA250A83B5005D5D84 = {
@@ -232,8 +307,10 @@
 		E8CF83F7250A83B7005D5D84 /* NanoBreweryTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8CF83F8250A83B7005D5D84 /* NanoBreweryTests.swift */,
-				E8CF83FA250A83B7005D5D84 /* Info.plist */,
+				E86AB3552511038A008DAA88 /* Application */,
+				E86AB35425110381008DAA88 /* Mocks */,
+				E86AB35325110379008DAA88 /* Tests */,
+				E86AB3612511A8C8008DAA88 /* Helpers */,
 			);
 			path = NanoBreweryTests;
 			sourceTree = "<group>";
@@ -307,6 +384,7 @@
 					};
 					E8CF83F3250A83B7005D5D84 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 						TestTargetID = E8CF83E2250A83B5005D5D84;
 					};
 				};
@@ -365,6 +443,7 @@
 				E8CF83E7250A83B5005D5D84 /* NanoBreweryApp.swift in Sources */,
 				E84FD68B250AC58B001A3B97 /* BeerListCellView.swift in Sources */,
 				E832C604250A92BA007E4BA2 /* BeerListView.swift in Sources */,
+				E86AB35A2511A2B8008DAA88 /* URLSessionable.swift in Sources */,
 				E832C60C250A9D9E007E4BA2 /* NetworkAgent.swift in Sources */,
 				E832C60A250A9C14007E4BA2 /* NetworkAPI.swift in Sources */,
 				E8FA476D250EBE9D0087E164 /* View+Modifiers.swift in Sources */,
@@ -385,7 +464,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8CF83F9250A83B7005D5D84 /* NanoBreweryTests.swift in Sources */,
+				E86AB3602511A812008DAA88 /* NetworkAgentMock.swift in Sources */,
+				E86AB35C2511A405008DAA88 /* NetworkAgentTests.swift in Sources */,
+				E86AB35E2511A7D9008DAA88 /* NetworkAPITests.swift in Sources */,
+				E86AB3632511A90F008DAA88 /* StubHelper.swift in Sources */,
+				E86AB3692511B0F7008DAA88 /* NetworkAPIMock.swift in Sources */,
+				E86AB3672511B0BB008DAA88 /* BeerListViewModelTests.swift in Sources */,
+				E86AB3572511A217008DAA88 /* URLSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,8 +650,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NanoBreweryTests/Info.plist;
+				INFOPLIST_FILE = NanoBreweryTests/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -575,8 +661,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eridbardhaj.NanoBreweryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanoBrewery.app/NanoBrewery";
 			};
 			name = Debug;
@@ -586,8 +673,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NanoBreweryTests/Info.plist;
+				INFOPLIST_FILE = NanoBreweryTests/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -597,7 +685,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eridbardhaj.NanoBreweryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanoBrewery.app/NanoBrewery";
 			};
 			name = Release;

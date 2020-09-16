@@ -10,7 +10,6 @@ import Combine
 
 protocol BreweryAPI {
     func listBeers() -> AnyPublisher<[Beer], Error>
-    func showBeer(_ id: Int) -> AnyPublisher<Beer, Error>
 }
 
 class NetworkAPI: BreweryAPI {
@@ -39,10 +38,6 @@ class NetworkAPI: BreweryAPI {
     
     func listBeers() -> AnyPublisher<[Beer], Error> {
         run(prepareRequest("beers"))
-    }
-    
-    func showBeer(_ id: Int) -> AnyPublisher<Beer, Error> {
-        run(prepareRequest("beers/\(id)"))
     }
     
     // MARK: - Helpers
