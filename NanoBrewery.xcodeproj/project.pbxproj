@@ -22,7 +22,6 @@
 		E8CF83E7250A83B5005D5D84 /* NanoBreweryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */; };
 		E8CF83EB250A83B7005D5D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83EA250A83B7005D5D84 /* Assets.xcassets */; };
 		E8CF83EE250A83B7005D5D84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83ED250A83B7005D5D84 /* Preview Assets.xcassets */; };
-		E8CF83F9250A83B7005D5D84 /* NanoBreweryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF83F8250A83B7005D5D84 /* NanoBreweryTests.swift */; };
 		E8FA4761250EB2ED0087E164 /* beer_list.json in Resources */ = {isa = PBXBuildFile; fileRef = E8FA475F250EB2ED0087E164 /* beer_list.json */; };
 		E8FA4762250EB2ED0087E164 /* beer_details.json in Resources */ = {isa = PBXBuildFile; fileRef = E8FA4760250EB2ED0087E164 /* beer_details.json */; };
 		E8FA4764250EBAF60087E164 /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA4763250EBAF60087E164 /* AttributedText.swift */; };
@@ -65,7 +64,6 @@
 		E8CF83ED250A83B7005D5D84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E8CF83EF250A83B7005D5D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8CF83F4250A83B7005D5D84 /* NanoBreweryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NanoBreweryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8CF83F8250A83B7005D5D84 /* NanoBreweryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBreweryTests.swift; sourceTree = "<group>"; };
 		E8CF83FA250A83B7005D5D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8FA475F250EB2ED0087E164 /* beer_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beer_list.json; sourceTree = "<group>"; };
 		E8FA4760250EB2ED0087E164 /* beer_details.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beer_details.json; sourceTree = "<group>"; };
@@ -188,6 +186,28 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		E86AB35325110379008DAA88 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E86AB35425110381008DAA88 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		E86AB3552511038A008DAA88 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E8CF83FA250A83B7005D5D84 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		E8CF83DA250A83B5005D5D84 = {
 			isa = PBXGroup;
 			children = (
@@ -232,8 +252,9 @@
 		E8CF83F7250A83B7005D5D84 /* NanoBreweryTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8CF83F8250A83B7005D5D84 /* NanoBreweryTests.swift */,
-				E8CF83FA250A83B7005D5D84 /* Info.plist */,
+				E86AB3552511038A008DAA88 /* Application */,
+				E86AB35425110381008DAA88 /* Mocks */,
+				E86AB35325110379008DAA88 /* Tests */,
 			);
 			path = NanoBreweryTests;
 			sourceTree = "<group>";
@@ -385,7 +406,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8CF83F9250A83B7005D5D84 /* NanoBreweryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +586,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NanoBreweryTests/Info.plist;
+				INFOPLIST_FILE = NanoBreweryTests/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -576,7 +596,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eridbardhaj.NanoBreweryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanoBrewery.app/NanoBrewery";
 			};
 			name = Debug;
@@ -587,7 +607,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NanoBreweryTests/Info.plist;
+				INFOPLIST_FILE = NanoBreweryTests/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -597,7 +617,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eridbardhaj.NanoBreweryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NanoBrewery.app/NanoBrewery";
 			};
 			name = Release;
