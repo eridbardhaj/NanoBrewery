@@ -25,6 +25,8 @@
 		E86AB35E2511A7D9008DAA88 /* NetworkAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB35D2511A7D8008DAA88 /* NetworkAPITests.swift */; };
 		E86AB3602511A812008DAA88 /* NetworkAgentMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB35F2511A812008DAA88 /* NetworkAgentMock.swift */; };
 		E86AB3632511A90F008DAA88 /* StubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB3622511A90F008DAA88 /* StubHelper.swift */; };
+		E86AB3672511B0BB008DAA88 /* BeerListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB3662511B0BB008DAA88 /* BeerListViewModelTests.swift */; };
+		E86AB3692511B0F7008DAA88 /* NetworkAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB3682511B0F7008DAA88 /* NetworkAPIMock.swift */; };
 		E8CF83E7250A83B5005D5D84 /* NanoBreweryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */; };
 		E8CF83EB250A83B7005D5D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83EA250A83B7005D5D84 /* Assets.xcassets */; };
 		E8CF83EE250A83B7005D5D84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CF83ED250A83B7005D5D84 /* Preview Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		E86AB35D2511A7D8008DAA88 /* NetworkAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPITests.swift; sourceTree = "<group>"; };
 		E86AB35F2511A812008DAA88 /* NetworkAgentMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAgentMock.swift; sourceTree = "<group>"; };
 		E86AB3622511A90F008DAA88 /* StubHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubHelper.swift; sourceTree = "<group>"; };
+		E86AB3662511B0BB008DAA88 /* BeerListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModelTests.swift; sourceTree = "<group>"; };
+		E86AB3682511B0F7008DAA88 /* NetworkAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIMock.swift; sourceTree = "<group>"; };
 		E8CF83E3250A83B5005D5D84 /* NanoBrewery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NanoBrewery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CF83E6250A83B5005D5D84 /* NanoBreweryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NanoBreweryApp.swift; sourceTree = "<group>"; };
 		E8CF83EA250A83B7005D5D84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,8 +206,8 @@
 		E86AB35325110379008DAA88 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E86AB35B2511A405008DAA88 /* NetworkAgentTests.swift */,
-				E86AB35D2511A7D8008DAA88 /* NetworkAPITests.swift */,
+				E86AB3652511B07A008DAA88 /* ViewModels */,
+				E86AB3642511B06F008DAA88 /* Services */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -213,6 +217,7 @@
 			children = (
 				E86AB3562511A217008DAA88 /* URLSessionMock.swift */,
 				E86AB35F2511A812008DAA88 /* NetworkAgentMock.swift */,
+				E86AB3682511B0F7008DAA88 /* NetworkAPIMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -239,6 +244,23 @@
 				E86AB3622511A90F008DAA88 /* StubHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E86AB3642511B06F008DAA88 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E86AB35B2511A405008DAA88 /* NetworkAgentTests.swift */,
+				E86AB35D2511A7D8008DAA88 /* NetworkAPITests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E86AB3652511B07A008DAA88 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E86AB3662511B0BB008DAA88 /* BeerListViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		E8CF83DA250A83B5005D5D84 = {
@@ -446,6 +468,8 @@
 				E86AB35C2511A405008DAA88 /* NetworkAgentTests.swift in Sources */,
 				E86AB35E2511A7D9008DAA88 /* NetworkAPITests.swift in Sources */,
 				E86AB3632511A90F008DAA88 /* StubHelper.swift in Sources */,
+				E86AB3692511B0F7008DAA88 /* NetworkAPIMock.swift in Sources */,
+				E86AB3672511B0BB008DAA88 /* BeerListViewModelTests.swift in Sources */,
 				E86AB3572511A217008DAA88 /* URLSessionMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

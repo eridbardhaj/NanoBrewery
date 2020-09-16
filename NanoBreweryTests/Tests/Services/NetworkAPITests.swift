@@ -34,7 +34,7 @@ class NetworkAPITests: XCTestCase {
     }
 
     // MARK: - Tests
-    // MARK: Run
+    // MARK: run
 
     func testRun_agentRunCalled() {
         let dummyRequest = URLRequest(url: "www.example.com".requiredURL)

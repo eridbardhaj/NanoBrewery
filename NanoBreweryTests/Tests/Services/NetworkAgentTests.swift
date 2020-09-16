@@ -34,6 +34,7 @@ class NetworkAgentTests: XCTestCase {
     }
 
     // MARK: - Tests
+    // MARK: run
 
     func testRun_dataTaskPublisherCalled() {
         let dummyRequest = URLRequest(url: "www.example.com".requiredURL)
