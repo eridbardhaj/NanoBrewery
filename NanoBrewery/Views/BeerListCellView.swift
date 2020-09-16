@@ -53,7 +53,7 @@ struct BeerListCellView: View {
     }
     
     private var rightContent: some View {
-        return VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 8) {
+        return VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: AppPadding.smallPadding) {
             HStack {
                 tintedIconTextRow(
                     imageName: "beer-bottle",
@@ -61,6 +61,8 @@ struct BeerListCellView: View {
                     font: .subHeading,
                     color: .lightText
                 )
+                .fixedSize(horizontal: false, vertical: true)
+
                 Spacer()
                 tintedIconTextRow(
                     imageName: "percentage",
