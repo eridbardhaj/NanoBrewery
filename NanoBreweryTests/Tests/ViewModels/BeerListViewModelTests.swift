@@ -50,7 +50,7 @@ class BeerListViewModelTests: XCTestCase {
 
         let result = XCTWaiter.wait(for: [exp], timeout: 0.1)
         if result == XCTWaiter.Result.timedOut {
-            XCTAssertEqual(viewModel.beerList, beerList)
+            XCTAssertEqual(viewModel.beerList, [StubHelper.beer, StubHelper.beer])
         } else {
             XCTFail("Delay interrupted")
         }
